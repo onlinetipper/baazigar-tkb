@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><!-- Meta Pixel Code -->
+<head>
+<!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -10,16 +11,21 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1544899026828529');
-fbq('track', 'PageView');
+
+fbq('init', '1544899026828529');   // Pixel
+fbq('track', 'PageView');          // ONLY PageView
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1544899026828529&ev=PageView&noscript=1"
-/></noscript>
+
+<noscript>
+  <img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1544899026828529&ev=PageView&noscript=1"/>
+</noscript>
 <!-- End Meta Pixel Code -->
+
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Baazigar</title>
+
 <style>
   :root {
     --white: #ffffff;
@@ -80,7 +86,6 @@ src="https://www.facebook.com/tr?id=1544899026828529&ev=PageView&noscript=1"
     margin-bottom:18px;
   }
 
-  /* circular profile */
   .profile {
     width: 130px;
     height: 130px;
@@ -118,7 +123,6 @@ src="https://www.facebook.com/tr?id=1544899026828529&ev=PageView&noscript=1"
     font-size: 14px;
   }
 
-  /* animated button */
   .btn-join {
     display:inline-flex;
     align-items:center;
@@ -128,12 +132,12 @@ src="https://www.facebook.com/tr?id=1544899026828529&ev=PageView&noscript=1"
     background: var(--btn-bg);
     color: var(--white);
     padding: 16px 28px;
-    border-radius: 44px;
-    font-size: 20px;
-    font-weight: 800;
-    text-decoration: none;
-    border: 3px solid var(--btn-border);
-    box-shadow: 0 10px 30px rgba(3,10,40,0.6);
+    border-radius:44px;
+    font-size:20px;
+    font-weight:800;
+    text-decoration:none;
+    border:3px solid var(--btn-border);
+    box-shadow:0 10px 30px rgba(3,10,40,0.6);
     animation: popup 2s infinite ease-in-out, pulseColor 3s infinite alternate;
   }
 
@@ -143,14 +147,14 @@ src="https://www.facebook.com/tr?id=1544899026828529&ev=PageView&noscript=1"
   }
 
   @keyframes pulseColor {
-    0% { background-color: #0b1b4a; }
-    50% { background-color: #152b7b; }
-    100% { background-color: #0b1b4a; }
+    0% { background-color:#0b1b4a; }
+    50% { background-color:#152b7b; }
+    100% { background-color:#0b1b4a; }
   }
 
   .btn-join:hover {
     transform: scale(1.1);
-    box-shadow: 0 14px 40px rgba(3,10,40,0.9);
+    box-shadow:0 14px 40px rgba(3,10,40,0.9);
   }
 
   .footer-credit {
@@ -169,6 +173,7 @@ src="https://www.facebook.com/tr?id=1544899026828529&ev=PageView&noscript=1"
   }
 </style>
 </head>
+
 <body>
 
 <div class="bg-overlay"></div>
@@ -178,7 +183,7 @@ src="https://www.facebook.com/tr?id=1544899026828529&ev=PageView&noscript=1"
     <div class="title">Baazigar Toss Ka Boss</div>
     <div class="subtitle">Toss Match Prediction</div>
 
-    <div id="profile" class="profile" style="background-image: url('https://raw.githubusercontent.com/onlinetipper/baazigar-tkb/2c2d602165fbdc0a9b4fdab12c1aef41254accb4/bfyu.jpg');"></div>
+    <div id="profile" class="profile" style="background-image:url('https://raw.githubusercontent.com/onlinetipper/baazigar-tkb/2c2d602165fbdc0a9b4fdab12c1aef41254accb4/bfyu.jpg');"></div>
 
     <div class="joining-line">FREE JOINING ENDS IN...</div>
     <div class="count" id="countNum">43</div>
@@ -186,14 +191,18 @@ src="https://www.facebook.com/tr?id=1544899026828529&ev=PageView&noscript=1"
     <div class="userline">@Tiger_Colling</div>
     <div class="request">Request access — approvals are quick ⬇</div>
 
-    <a id="joinBtn" class="btn-join" href="https://t.me/+4PPGbbg7GdAyZjZl" target="_blank">
+    <!-- SUBSCRIBE BUTTON EVENT -->
+    <a id="joinBtn" class="btn-join"
+       href="https://t.me/+4PPGbbg7GdAyZjZl"
+       target="_blank"
+       onclick="fbq('track','Subscribe');">
       JOIN NOW FOR FREE
       <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none">
         <path d="M21 4L3 10.5L10 13.5L13 21L15 13.5L21 4Z" fill="#fff"/>
       </svg>
     </a>
 
-    <div class="footer-credit">SETUP<a href="https://t.me/AdDukan1" target="_blank">AD DUKAN</a></div>
+    <div class="footer-credit">SETUP <a href="https://t.me/AdDukan1" target="_blank">AD DUKAN</a></div>
   </div>
 </div>
 
